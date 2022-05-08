@@ -189,7 +189,7 @@ a:focus {
 }
 
 .dark-bg {
-  background: #252525;
+  background: rgb(24, 52, 85);
   color: #fff;
 }
 
@@ -1192,6 +1192,7 @@ ul.navbar-nav > li > a {
   text-transform: capitalize;
   color: #fff;
   margin-top: 5px;
+  border: 2px solid #fff;
 }
 
 @media (max-width: 1200px) {
@@ -1207,8 +1208,9 @@ ul.navbar-nav > li > a {
 }
 
 .header-get-a-quote .btn-primary:hover {
-  background: #272d33;
-  color: #ffb600 !important;
+  border: 2px solid rgb(58, 83, 113);
+  background: #fff;
+  color: rgb(58, 83, 113) !important;
 }
 
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
@@ -1363,11 +1365,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .slider.border {
   background: none;
-  border: 2px solid #ffb600 !important;
+  border: 2px solid rgb(58, 83, 113) !important;
 }
 
 .slider.border:hover {
-  background: #ffb600;
+  background: rgb(58, 83, 113);
   border: 2px solid transparent;
 }
 
@@ -1408,7 +1410,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slick-dots li button:hover:before, .slick-dots .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #ffb600;
+  color: rgb(58, 83, 113);
 }
 
 .slick-slide {
@@ -1437,12 +1439,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   width: 60px;
   height: 60px;
   font-size: 22px;
-  border-radius: 0;
+  /* border-radius: 5px; */
   transition: all 500ms ease;
 }
 
 .banner-carousel .carousel-control i:hover {
-  background: #ffb600;
+  background: rgb(58, 83, 113);
   color: #fff;
 }
 
@@ -1526,12 +1528,14 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Call to action
 ================================================== */
 .call-to-action {
-  background-color: #272d33;
+  background-color: rgb(58, 83, 113);
+  /* color: #0052a5; */
   padding: 30px;
 }
 
 .call-to-action-title {
   color: #fff;
+  /* border-bottom: 1px solid rgb(58, 83, 113); */
   margin: 0;
   padding: 25px 0;
   line-height: normal;
@@ -1545,12 +1549,19 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .call-to-action-box .action-style-box {
-  background: #ffb600;
+  background: #fff;
+  border-bottom: 3px solid rgb(58, 83, 113);
   padding: 30px;
+}
+.call-to-action-btn .btn-dark {
+  background: rgb(58, 83, 113);
+}
+.call-to-action-btn .btn-dark:hover {
+  background: rgb(24, 52, 85);
 }
 
 .action-title {
-  color: #fff;
+  color: rgb(58, 83, 113);
   margin: 0;
   line-height: 36px;
   font-size: 18px;
@@ -1686,7 +1697,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-facts .ts-facts-icon i {
   font-size: 42px;
-  color: #ffb600;
+  color: rgb(24, 52, 85);
 }
 
 .ts-facts .ts-facts-content .ts-facts-num {
@@ -1707,7 +1718,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;
-  color: #ffb600;
+  color: rgb(24, 52, 85);
 }
 
 .ts-service-box .ts-service-box-content {
@@ -2281,7 +2292,7 @@ img.testimonial-thumb {
   margin: 0 0 2px;
   font-weight: 700;
   display: block;
-  color: #ffb600;
+  color: rgb(58, 83, 113);
 }
 
 .quote-item-footer {
@@ -2297,19 +2308,20 @@ img.testimonial-thumb {
 
 /* Testimonial Border */
 .quote-item.quote-border .quote-text-border {
-  border: 1px solid #ffb600;
+  border: 3px solid rgb(58, 83, 113);
   padding: 20px;
   position: relative;
   line-height: 28px;
   color: #666;
   font-size: 18px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .quote-item.quote-border .quote-text-border:before {
   border: 12px solid;
   border-color: #e1e1e1 transparent transparent;
-  border-top-color: #ffb600;
+  border-top-color: rgb(58, 83, 113);
   bottom: -24px;
   position: absolute;
   content: "";
