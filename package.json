@@ -1,0 +1,26 @@
+{
+  "name": "housingprotector1",
+  "version": "1.0.0",
+  "description": "housingprotector",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArseneNgenzi/housingprotector1.git"
+  },
+  "author": "arsene,lcdamy\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[ ft lcdamy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArseneNgenzi/housingprotector1/issues"
+  },
+  "homepage": "https://github.com/ArseneNgenzi/housingprotector1#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
