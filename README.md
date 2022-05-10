@@ -11,7 +11,7 @@ $ git clone https://github.com/ArseneNgenzi/housingprotector1.git
 2. Go to root folder:
 
 ```
-$ cd [git]/housingprotector1
+$ cd housingprotector1
 ```
 
 3. Install node modules:
