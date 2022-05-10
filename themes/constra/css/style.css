@@ -10,6 +10,16 @@ Description: Constra - Construction Html5 Template
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 /* Typography
 ================================================== */
+
+
+
+/* VARIABLES */
+:root {
+  --mainBlue: #3a7ca5;
+  --secondaryBlue: #0067a5;
+  --mainOrange: #ffb600;
+}
+
 body {
   background: #fff;
   color: #555;
@@ -81,6 +91,7 @@ html {
   position: relative;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -189,7 +200,7 @@ a:focus {
 }
 
 .dark-bg {
-  background: rgb(24, 52, 85);
+  background: var(--mainBlue);
   color: #fff;
 }
 
@@ -370,7 +381,7 @@ blockquote {
   margin: 20px 0;
   background: #f9f9f9;
   position: relative;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid var(--mainBlue);
   padding-left: 40px;
 }
 
@@ -456,7 +467,7 @@ ul.list-arrow li:before {
   font-family: "Font Awesome 5 Free";
   content: "\f105";
   margin-right: 10px;
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
   font-size: 16px;
   font-weight: bold;
 }
@@ -548,6 +559,11 @@ a[href^=tel] {
 
 .general-btn {
   margin-top: 50px;
+  
+}
+.general-btn .btn-primary {
+  background: var(--mainBlue);
+  border: 2px solid transparent;
 }
 
 /* Bootstrap */
@@ -673,7 +689,9 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: rgb(58, 83, 113);
+  background: var(--secondaryBlue);
+  /* background: #3a7ca5; */
+  /* background: rgb(1, 101, 151); */
 }
 
 .header-one .navbar-collapse {
@@ -1008,12 +1026,12 @@ ul.navbar-nav > li > a {
 
 .dropdown-menu {
   text-align: left;
-  background: #fff;
+  background: var(--mainBlue);
   z-index: 100;
   min-width: 200px;
   border-radius: 0;
   border: 0;
-  border-top: 2px solid #ffb600;
+  border-top: 2px solid var(--mainOrange);
   padding: 0 20px;
   margin: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -1040,7 +1058,7 @@ ul.navbar-nav > li > a {
 }
 
 .dropdown-menu-large > li > ul > li.active > a {
-  color: #ffb600 !important;
+  color: var(--mainOrange) !important;
 }
 
 .navbar-nav > li > .dropdown-menu a {
@@ -1057,7 +1075,7 @@ ul.navbar-nav > li > a {
   text-decoration: none;
   padding: 15px 0;
   letter-spacing: .3px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--mainOrange);
   color: #333333;
 }
 
@@ -1117,7 +1135,7 @@ ul.navbar-nav > li > a {
   cursor: pointer;
   top: 22px;
   right: 18px;
-  color: #999;
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -1193,6 +1211,7 @@ ul.navbar-nav > li > a {
   color: #fff;
   margin-top: 5px;
   border: 2px solid #fff;
+  background: var(--mainBlue);
 }
 
 @media (max-width: 1200px) {
@@ -1208,9 +1227,9 @@ ul.navbar-nav > li > a {
 }
 
 .header-get-a-quote .btn-primary:hover {
-  border: 2px solid rgb(58, 83, 113);
+  border: 2px solid var(--mainBlue);
   background: #fff;
-  color: rgb(58, 83, 113) !important;
+  color: var(--mainBlue) !important;
 }
 
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
@@ -1269,7 +1288,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slide-title-box {
   font-size: 16px;
   line-height: 39px;
-  background: rgb(58, 83, 113);
+  background: var(--mainBlue);
   color: #fff;
   display: inline-block;
   padding: 0 15px;
@@ -1365,11 +1384,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .slider.border {
   background: none;
-  border: 2px solid rgb(58, 83, 113) !important;
+  border: 2px solid var(--mainBlue) !important;
 }
 
 .slider.border:hover {
-  background: rgb(58, 83, 113);
+  background: var(--mainBlue);
   border: 2px solid transparent;
 }
 
@@ -1410,7 +1429,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slick-dots li button:hover:before, .slick-dots .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
 }
 
 .slick-slide {
@@ -1444,7 +1463,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .banner-carousel .carousel-control i:hover {
-  background: rgb(58, 83, 113);
+  background: var(--mainBlue);
   color: #fff;
 }
 
@@ -1528,7 +1547,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Call to action
 ================================================== */
 .call-to-action {
-  background-color: rgb(58, 83, 113);
+  background-color: var(--mainBlue);
   /* color: #0052a5; */
   padding: 30px;
 }
@@ -1550,18 +1569,19 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .call-to-action-box .action-style-box {
   background: #fff;
-  border-bottom: 3px solid rgb(58, 83, 113);
+  border-bottom: 3px solid var(--mainBlue);
   padding: 30px;
 }
 .call-to-action-btn .btn-dark {
-  background: rgb(58, 83, 113);
+  background: var(--mainBlue);
 }
 .call-to-action-btn .btn-dark:hover {
-  background: rgb(24, 52, 85);
+  background: var(--mainOrange);
+  color: #000;
 }
 
 .action-title {
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
   margin: 0;
   line-height: 36px;
   font-size: 18px;
@@ -1640,7 +1660,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   left: 50%;
   border-width: 10px;
   border-style: solid;
-  border-color: #ffb600 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: var(--mainOrange) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1697,7 +1717,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-facts .ts-facts-icon i {
   font-size: 42px;
-  color: rgb(24, 52, 85);
+  color: var(--mainBlue);
 }
 
 .ts-facts .ts-facts-content .ts-facts-num {
@@ -1718,7 +1738,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;
-  color: rgb(24, 52, 85);
+  color: var(--mainBlue);
 }
 
 .ts-service-box .ts-service-box-content {
@@ -1744,10 +1764,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .service-box-title {
   font-size: 16px;
   margin: 0 0 10px;
+  
 }
 
 .service-box-title a {
-  color: #333;
+  color: var(--mainBlue);
 }
 
 .service-box-title a:hover {
@@ -1804,9 +1825,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   margin: 0 0 10px;
 }
 
-.service-box-title a {
-  color: #333;
-}
+
 
 .service-box-title a:hover {
   color: $color-primary;
@@ -1820,7 +1839,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-icon.icon-round i {
   font-size: 24px;
   color: #fff;
-  background: rgb(58, 83, 113);
+  background: var(--mainBlue);
   text-align: center;
   border-radius: 100%;
   width: 60px;
@@ -1926,12 +1945,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   display: inline-block;
   margin: 20px 0 50px;
   width: 100%;
-  border-bottom: 3px solid #ffb600;
+  border-bottom: 3px solid var(--mainBlue);
 }
 
 .shuffle-btn-group label {
   display: inline-block;
-  color: #212121;
+  color: var(--mainBlue);
   font-size: 14px;
   padding: 6px 25px;
   padding-top: 10px;
@@ -1956,8 +1975,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .shuffle-btn-group label.active {
-  color: #212121;
-  background: #ffb600;
+  color: #fff;
+  background: var(--mainBlue);
 }
 
 .shuffle-btn-group label input {
@@ -1966,7 +1985,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* Project shuffle Item */
 .shuffle-item {
-  padding: 0;
+  padding: 0.5rem;
 }
 
 .shuffle-item .project-img-container {
@@ -2008,7 +2027,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   right: 0;
   z-index: 1;
   padding: 5px 12px;
-  background: #ffb600;
+  background: var(--mainBlue);
   color: #fff;
   opacity: 0;
   -webkit-transform: perspective(1px) scale3d(0, 0, 0);
@@ -2045,19 +2064,20 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-item-title a {
-  color: #fff;
+  color: var(--mainOrange);
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-item-title a:hover {
-  color: #ffb600;
+  color: #fff;
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-cat {
-  background: #ffb600;
+  background: var(--mainBlue);
+  /* color: #fff; */
   display: inline-block;
   padding: 2px 8px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -2069,7 +2089,9 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .general-btn .btn-primary:hover {
-  background: #000;
+  background: transparent;
+  color: var(--mainBlue);
+  border: 2px solid var(--mainBlue);
 }
 
 /* Project owl */
@@ -2194,12 +2216,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"] {
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"]::before {
   content: "\f106";
-  background-color: rgb(58, 83, 113);
+  background-color: var(--mainBlue);
 }
 
 .accordion-group.accordion-classic .card-header .btn:before {
@@ -2267,7 +2289,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   left: 0;
   top: 0;
   font-weight: 700;
-  color: #ffc009;
+  color: var(--mainBlue);
 }
 
 .testimonial-slide .slick-dots {
@@ -2292,7 +2314,7 @@ img.testimonial-thumb {
   margin: 0 0 2px;
   font-weight: 700;
   display: block;
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
 }
 
 .quote-item-footer {
@@ -2308,7 +2330,7 @@ img.testimonial-thumb {
 
 /* Testimonial Border */
 .quote-item.quote-border .quote-text-border {
-  border: 3px solid rgb(58, 83, 113);
+  border: 3px solid var(--mainBlue);
   padding: 20px;
   position: relative;
   line-height: 28px;
@@ -2321,7 +2343,7 @@ img.testimonial-thumb {
 .quote-item.quote-border .quote-text-border:before {
   border: 12px solid;
   border-color: #e1e1e1 transparent transparent;
-  border-top-color: rgb(58, 83, 113);
+  border-top-color: var(--mainBlue);
   bottom: -24px;
   position: absolute;
   content: "";
@@ -2365,7 +2387,7 @@ img.testimonial-thumb {
 /* Subscribe area
 ================================================== */
 .subscribe {
-  background: #ffb600;
+  background: var(--mainBlue);
   padding: 0;
 }
 
@@ -2508,7 +2530,7 @@ img.testimonial-thumb {
   margin: 0 0 30px;
   padding-left: 15px;
   text-transform: uppercase;
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
   border-left: 6px solid #fff;
   /* text-decoration: underline; */
 }
@@ -2548,7 +2570,7 @@ img.testimonial-thumb {
 }
 
 .footer-social ul li:hover a i{
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
 }
 
 /* Links */
@@ -2582,7 +2604,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: rgb(58, 83, 113);
+  background: var(--mainBlue);
   color: #111;
   padding: 25px 0 15px;
   position: relative;
@@ -2639,7 +2661,7 @@ img.testimonial-thumb {
   font-weight: 700;
   font-size: 16px;
   padding: 0;
-  border: 2px solid rgb(58, 83, 113);
+  border: 1px solid var(--mainBlue);
 }
 
 @media (max-width: 767px) {
@@ -2652,7 +2674,7 @@ img.testimonial-thumb {
 }
 
 #back-to-top .btn.btn-primary:hover {
-  color: rgb(58, 83, 113);
+  color: var(--mainBlue);
 }
 
 /* Sub Pages
@@ -2763,7 +2785,7 @@ img.testimonial-thumb {
 }
 
 .page-slider .carousel-control i:hover {
-  background: #ffb600;
+  background: var(--mainBlue);
   color: #fff;
 }
 
@@ -2777,7 +2799,7 @@ img.testimonial-thumb {
 }
 
 .page-slider.small-bg .box-slider-text {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 1);
   padding: 5px 20px;
 }
 
@@ -2853,7 +2875,7 @@ img.testimonial-thumb {
 }
 
 .team-slide .carousel-control:hover {
-  background-color: #ffb600;
+  background-color: var(--mainBlue);
   color: #fff;
 }
 
@@ -2896,7 +2918,7 @@ img.testimonial-thumb {
   padding: 15px 25px;
   margin-top: 0;
   color: #fff;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   transition: 350ms;
 }
 
@@ -2917,7 +2939,7 @@ img.testimonial-thumb {
   margin-top: 0;
   margin-bottom: 3px;
   line-height: normal;
-  color: #ffb600;
+  color: var(--mainBlue);
 }
 
 .ts-team-wrapper .ts-designation {
@@ -2928,14 +2950,14 @@ img.testimonial-thumb {
 }
 
 .ts-team-wrapper .team-social-icons a i {
-  color: #fff;
+  color: var(--mainBlue);
   margin-right: 8px;
   text-align: center;
   transition: 400ms;
 }
 
 .ts-team-wrapper .team-social-icons a i:hover {
-  color: #ffb600;
+  color: #fff;
 }
 
 .ts-team-wrapper:hover .ts-team-content {
