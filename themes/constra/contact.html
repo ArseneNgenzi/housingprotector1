@@ -102,7 +102,7 @@
                 
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav mr-auto">
-                      <li class="nav-item  active">
+                      <li class="nav-item">
                           <a href="./index.html" class="nav-link">Home </a>
                           <!-- <ul class="dropdown-menu" role="menu">
                             <li class="active"><a href="index.html">Home One</a></li>
@@ -162,7 +162,7 @@
                           </ul>
                       </li> -->
               
-                      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                      <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Other <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
@@ -207,7 +207,7 @@
                 <h1 class="banner-title">Contact</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                       <!-- <li class="breadcrumb-item"><a href="#">Company</a></li> -->
                       <li class="breadcrumb-item active" aria-current="page">Contact </li>
                     </ol>
@@ -285,7 +285,9 @@
 
         <!-- <form id="contact-form" action="#" method="post" role="form"> -->
         <form id="contact-form" role="form">
-          <div class="error-container"></div>
+          <div class="form-feedback-container text-center">
+            <p class="submit-feedback "></p>
+          </div>
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
@@ -315,6 +317,7 @@
           <div class="text-right"><br>
             <button id="sendBtn" class="btn btn-primary solid blank" type="submit">Send Message</button>
           </div>
+          
         </form>
       </div>
 
