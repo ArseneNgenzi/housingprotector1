@@ -689,7 +689,7 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: var(--secondaryBlue);
+  background: var(--mainBlue);
   /* background: #3a7ca5; */
   /* background: rgb(1, 101, 151); */
 }
@@ -716,7 +716,7 @@ ul.top-info li p.info-text {
 }
 
 .header-one .logo-area {
-  padding: 30px 0;
+  padding: 8px 0;
 }
 
 .navbar-fixed {
@@ -885,6 +885,8 @@ ul.top-info-box > li.nav-search i {
   float: left;
   margin-top: 10px;
   padding: 12px;
+  border: 1px solid var(--mainOrange);
+
 }
 
 .navbar {
@@ -898,7 +900,8 @@ ul.top-info-box > li.nav-search i {
   padding: 6px;
   border-radius: 0;
   font-size: 1rem;
-  background: #ffb600;
+  background: var(--mainOrange);
+  /* border: 1px solid var(--mainOrange); */
 }
 
 .navbar-toggler:focus {
@@ -908,6 +911,7 @@ ul.top-info-box > li.nav-search i {
 .navbar-dark .navbar-toggler-icon,
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  /* border: 1px solid var(--mainOrange); */
 }
 
 ul.navbar-nav > li:hover > a,
@@ -1091,7 +1095,7 @@ ul.navbar-nav > li > a {
 
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus {
-  color: #ffb600;
+  color: #fff;
 }
 
 @media (min-width: 991px) {
@@ -3087,6 +3091,43 @@ img.testimonial-thumb {
 
 label {
   font-weight: 400;
+}
+
+.form-feedback-container .submit-feedback {
+  font-size: 1.5rem;
+  /* color: green; */
+  font-weight: 800;
+  /* background: #0067a5; */
+  padding: 0.6rem;
+  width: 40%;
+  margin: 0rem auto 2rem auto;
+}
+
+.form-feedback-container .submit-feedback.error {
+  animation: submitFeedback 3s ease forwards;
+  color: #fff;
+  background: red;
+  
+  
+}
+
+.form-feedback-container .submit-feedback.success {
+  animation: submitFeedback 3s ease forwards;
+  color: #fff;
+  background: green;
+}
+
+/* ANIMATION FOR FORM FEEDBACK MESSAGE */
+@keyframes submitFeedback {
+  0% {
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
 }
 
 /* Contact page 2 */
