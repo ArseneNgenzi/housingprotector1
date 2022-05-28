@@ -8,6 +8,9 @@ Description: Constra - Construction Html5 Template
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+
+
+
 /* Typography
 ================================================== */
 
@@ -587,6 +590,29 @@ a[href^=tel] {
 a[href^=tel] {
   color: inherit;
   text-decoration: none;
+}
+
+/* Pre-Loader 
+================================================== */
+#preloader {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  z-index: 10;
+}
+.preloader-h1 {
+  font-size: 3.5rem;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#preloader #housing-span {
+  color: var(--mainBlue);
 }
 
 /* Top Bar
@@ -1264,6 +1290,14 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Slider
 ================================================== */
 /*-- Main slide --*/
+
+.banner-carousel.banner-carousel-2 {
+  --webkit-transition: opacity 2000s ease-in-out;
+    --moz-transition: opacity 2000s ease-in-out;
+    --ms-transition: opacity 2000s ease-in-out;
+    --o-transition: opacity 2000s ease-in-out;
+     opacity: 1;
+}
 .banner-carousel .banner-carousel-item {
   height: 700px;
   color: #fff;
@@ -1573,15 +1607,18 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .call-to-action-box .action-style-box {
   background: #fff;
-  border-bottom: 3px solid var(--mainBlue);
+  border: 3px solid var(--mainBlue);
   padding: 30px;
+  border-radius: 10px;
 }
 .call-to-action-btn .btn-dark {
   background: var(--mainBlue);
+  border: 2px solid transparent;
 }
 .call-to-action-btn .btn-dark:hover {
-  background: var(--mainOrange);
-  color: #000;
+  background: #fff;
+  color: var(--mainBlue);
+  border: 2px solid var(--mainBlue);
 }
 
 .action-title {
@@ -1778,6 +1815,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .service-box-title a:hover {
   color: #ffb600;
 }
+/* Service SVG */
+.service-svg {
+  /* background-color: var(--mainBlue); */
+  color: var(--mainBlue);
+}
 
 /* Service box bg */
 .ts-service-box-bg {
@@ -1942,6 +1984,26 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   background: #ffb600;
 }
 
+/* About us HOME PAGE */
+
+/* Our values */
+.our-values h2 {
+  color: var(--mainBlue);
+}
+.our-values ul li {
+  /* background: var(--mainBlue); */
+  /* color: var(--mainBlue); */
+  margin: 1rem 0;
+  /* padding: 1rem 0; */
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* list-style-type: none; */
+}
+/* Twitter Feed */
+.twitter-feed h2 {
+  color: var(--mainBlue);
+}
+
 /* Projects area
 ================================================== */
 /* Project filter nav */
@@ -2069,6 +2131,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .shuffle-item .project-img-container .project-item-info-content .project-item-title a {
   color: var(--mainOrange);
+  display: none;
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-item-title a:hover {
@@ -2076,7 +2139,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-cat {
-  background: var(--mainBlue);
+  background: var(--mainOrange);
   /* color: #fff; */
   display: inline-block;
   padding: 2px 8px;
@@ -3092,6 +3155,17 @@ img.testimonial-thumb {
 label {
   font-weight: 400;
 }
+.form-group label {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--mainBlue);
+}
+.form-control {
+  border-radius: 5px;
+}
+.form-control:focus {
+  border: 1px solid var(--mainBlue);
+}
 
 .form-feedback-container .submit-feedback {
   font-size: 1.5rem;
@@ -3104,7 +3178,7 @@ label {
 }
 
 .form-feedback-container .submit-feedback.error {
-  animation: submitFeedback 3s ease forwards;
+  animation: submitFeedback 1s ease forwards;
   color: #fff;
   background: red;
   
@@ -3112,7 +3186,7 @@ label {
 }
 
 .form-feedback-container .submit-feedback.success {
-  animation: submitFeedback 3s ease forwards;
+  animation: submitFeedback 1s ease forwards;
   color: #fff;
   background: green;
 }

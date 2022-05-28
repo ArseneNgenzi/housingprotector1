@@ -19,12 +19,26 @@
 ================================================== -->
     <link rel="icon" type="image/jpg" href="images/assets/logointitle.JPG" />
 
+<!-- EmailJS CDN script
+================================================== -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("hPWnzAmKyuf0rpatB");
+   })();
+</script>
+
     <!-- CSS
 ================================================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <script src="https://use.fontawesome.com/49c0140805.js"></script>
     <!-- Animation -->
     <link rel="stylesheet" href="animate-css/animate.css" />
     <!-- slick Carousel -->
@@ -39,6 +53,25 @@
   <body>
     <div class="body-inner">
       <!-- {PLACE TOP BAR HERE IF NEEDED} -->
+
+<!-- ============================================================================================================================= -->
+
+      <!-- PRE-LOADER -->
+  <div id="preloader">
+    <!-- <img src="./images/assets/preloader1.gif"> -->
+
+    <h1 class=" preloader-h1 text-center animate__animated animate__pulse">
+      <span id="housing-span">HOUSING</span> <br>
+      <!-- <span id="protector-span">PROTECTOR</span> -->
+    </h1>
+    <h1 class=" preloader-h1 text-center animate__animated animate__pulse">
+      <!-- <span id="housing-span">HOUSING</span> <br> -->
+      <span id="protector-span">PROTECTOR</span>
+    </h1>
+  </div>
+
+<!-- ============================================================================================================================= -->
+
       <!-- Header start -->
       <header id="header" class="header-one">
         <div class="bg-white">
@@ -66,7 +99,7 @@
                           <p class="info-box-title">Call Us</p>
                           <p class="info-box-subtitle">
                             <a href="tel:(+250) 788-888-888"
-                              >(+250) 788-888-888</a
+                              >(+250) 788-220-688</a
                             >
                           </p>
                         </div>
@@ -78,7 +111,7 @@
                           <p class="info-box-title">Email Us</p>
                           <p class="info-box-subtitle">
                             <a href="mailto:housingprotector@gmail.com"
-                              >housingprotector@gmail.com</a
+                              >housingprotectorltd@gmail.com</a
                             >
                           </p>
                         </div>
@@ -127,7 +160,7 @@
                       </li>
 
                       <li class="nav-item">
-                        <a href="./about.html" class="nav-link">About </a>
+                        <a href="#ts-features" class="nav-link">About </a>
                         <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="team.html">Our People</a></li>
@@ -138,7 +171,7 @@
                       </li>
 
                       <li class="nav-item">
-                        <a href="./projects.html" class="nav-link">Projects </a>
+                        <a href="#portfolio" class="nav-link">Portfolio </a>
                         <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="projects.html">Projects All</a></li>
                             <li><a href="projects-single.html">Projects Single</a></li>
@@ -179,9 +212,9 @@
                       </li> -->
 
                       <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#contact-section">Contact</a>
                       </li>
-                      <li class="nav-item dropdown">
+                      <!-- <li class="nav-item dropdown">
                         <a
                           href="#"
                           class="nav-link dropdown-toggle"
@@ -189,13 +222,13 @@
                           >Other <i class="fa fa-angle-down"></i
                         ></a>
                         <ul class="dropdown-menu" role="menu">
-                          <!-- <li><a href="about.html">About Us</a></li> -->
-                          <!-- <li><a href="team.html">Our People</a></li> -->
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="team.html">Our People</a></li>
                           <li><a href="testimonials.html">Testimonials</a></li>
                           <li><a href="faq.html">Faq</a></li>
-                          <!-- <li><a href="pricing.html">Pricing</a></li> -->
+                          <li><a href="pricing.html">Pricing</a></li>
                         </ul>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </nav>
@@ -228,12 +261,33 @@
       </header>
       <!--/ Header end -->
 
+<!-- ============================================================================================================================= -->
+
+      <!-- Carousel Start -->
       <div class="banner-carousel banner-carousel-1 mb-0">
+        <!-- Carousel slider  1 -->
         <div
           class="banner-carousel-item"
-          style="background-image: url(images/assets/65.jpg)"
+          style="background-image: url(images/assets/78.jpg)"
         >
-          <div class="slider-content">
+          <div class="container">
+            <div class="box-slider-content">
+              <div class="box-slider-text">
+                <h2 class="box-slide-title">17 Years Of Excellence In</h2>
+                <h3 class="box-slide-sub-title">Construction Industry</h3>
+                <p class="box-slide-description">
+                  You have ideas, goals, and dreams. We have a culturally
+                  diverse, forward thinking team looking for talent like.
+                </p>
+                <p>
+                  <a href="contact.html" class="slider btn btn-primary border"
+                    >Contact Now</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="slider-content">
             <div class="container h-100">
               <div class="row align-items-center h-100">
                 <div class="col-md-12 text-center">
@@ -244,7 +298,6 @@
                     Construction Industry
                   </h3>
                   <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                    <!-- <a href="services.html" class="slider btn btn-primary">Our Services</a> -->
                     <a href="contact.html" class="slider btn btn-primary border"
                       >Contact Now</a
                     >
@@ -252,15 +305,37 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
+        <!-- Carousel slider  2 -->
         <div
           class="banner-carousel-item"
           style="background-image: url(images/assets/64.jpg)"
         >
-          <div class="slider-content text-left">
+          <div class="slider-content">
             <div class="container h-100">
+              <div class="box-slider-content">
+                <div class="box-slider-text">
+                  <h2 class="box-slide-title">When Quality Matters</h2>
+                  <h3 class="box-slide-sub-title">Your Choice is Simple</h3>
+                  <p class="box-slide-description">
+                    You have ideas, goals, and dreams. We have a culturally
+                    diverse, forward thinking team looking for talent like.
+                  </p>
+                  <p>
+                    <a
+                      href="projects.html"
+                      class="slider btn btn-primary border"
+                      aria-label="projects"
+                      >See Our Projects</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container h-100">
               <div class="row align-items-center h-100">
                 <div class="col-md-12">
                   <h2 class="slide-title-box" data-animation-in="slideInDown">
@@ -281,10 +356,10 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
-
+<!-- Carousel slider  3-->
         <div
           class="banner-carousel-item"
           style="
@@ -292,8 +367,29 @@
             background-position: 60% 30%;
           "
         >
-          <div class="slider-content text-right">
+          <div class="slider-content">
             <div class="container h-100">
+              <div class="box-slider-content">
+                <div class="box-slider-text">
+                  <h2 class="box-slide-title">Meet Our Engineers</h2>
+                  <h3 class="box-slide-sub-title">We Believe In Durability</h3>
+                  <p class="box-slide-description">
+                    You have ideas, goals, and dreams. We have a culturally
+                    diverse, forward thinking team looking for talent like.
+                  </p>
+                  <p>
+                    <a
+                      href="about.html"
+                      class="slider btn btn-primary border"
+                      aria-label="projects"
+                      >Learn More</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container h-100">
               <div class="row align-items-center h-100">
                 <div class="col-md-12">
                   <h2 class="slide-title" data-animation-in="slideInDown">
@@ -310,7 +406,6 @@
                     achieve success.
                   </p>
                   <div data-animation-in="slideInLeft">
-                    <!-- <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Talk To Us</a> -->
                     <a
                       href="about.html"
                       class="slider btn btn-primary border"
@@ -320,11 +415,15 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
+      <!-- Carousel End -->
 
+<!-- ============================================================================================================================= -->
+
+      <!-- We understand your need start -->
       <section class="call-to-action-box no-padding">
         <div class="container">
           <div class="action-style-box">
@@ -332,7 +431,7 @@
               <div class="col-md-8 text-center text-md-left">
                 <div class="call-to-action-text">
                   <h3 class="action-title">
-                    We understand your needs on construction
+                    We understand your needs on your house
                   </h3>
                 </div>
               </div>
@@ -352,9 +451,619 @@
         </div>
         <!-- Container end -->
       </section>
-      <!-- Action end -->
+      <!-- We understand your need End -->
 
+<!-- ============================================================================================================================= -->
+
+      <!-- Services start -->
+      <section id="ts-service-area" class="ts-service-area pb-0">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 class="section-title">We Are Specialists In</h2>
+              <h3 class="section-sub-title">What We Do</h3>
+            </div>
+          </div>
+          <!--/ Title row end -->
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="ts-service-box d-flex">
+                <!-- <div class="ts-service-box-img">
+                <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
+              </div> -->
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title">
+                    <a href="#">Home Construction</a>
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    Integer adipiscing erat
+                  </p>
+                </div>
+              </div>
+              <!-- Service 1 end -->
+
+              <div class="ts-service-box d-flex">
+                <!-- <div class="ts-service-box-img">
+                <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
+              </div> -->
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title">
+                    <a href="#">Building Remodels</a>
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    Integer adipiscing erat
+                  </p>
+                </div>
+              </div>
+              <!-- Service 2 end -->
+
+              <div class="ts-service-box d-flex">
+                <!-- <div class="ts-service-box-img">
+                <img loading="lazy" src="images/icon-image/service-icon3.png"  alt="service-icon">
+              </div> -->
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title">
+                    <a href="#">Interior Design</a>
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    Integer adipiscing erat
+                  </p>
+                </div>
+              </div>
+              <!-- Service 3 end -->
+            </div>
+            <!-- Col end -->
+
+            <div class="col-lg-4 text-center">
+              <!-- <img
+                loading="lazy"
+                class="img-fluid"
+                src="./images/services/bluehouse111.png"
+                alt="service-avater-image"
+              /> -->
+              <!-- <i class="fa-solid fa-house-chimney fa-10x" style="height: 500px; width: 500px;"></i> -->
+              <!-- <i class="bi bi-house-door-fill"></i> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                fill="currentColor"
+                class="bi bi-house-door-fill service-svg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+                />
+              </svg>
+            </div>
+            <!-- Col end -->
+
+            <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
+              <div class="ts-service-box d-flex">
+                <!-- <div class="ts-service-box-img">
+                <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
+              </div> -->
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title">
+                    <a href="#">Exterior Design</a>
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    Integer adipiscing erat
+                  </p>
+                </div>
+              </div>
+              <!-- Service 4 end -->
+
+              <div class="ts-service-box d-flex">
+                <!-- <div class="ts-service-box-img">
+                <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
+              </div> -->
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title"><a href="#">Renovation</a></h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    Integer adipiscing erat
+                  </p>
+                </div>
+              </div>
+              <!-- Service 5 end -->
+
+              <div class="ts-service-box d-flex">
+                <!-- <div class="ts-service-box-img">
+                <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon">
+              </div> -->
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title">
+                    <a href="#">Safety Management</a>
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    Integer adipiscing erat
+                  </p>
+                </div>
+              </div>
+              <!-- Service 6 end -->
+            </div>
+            <!-- Col end -->
+          </div>
+          <!-- Content row end -->
+        </div>
+        <!--/ Container end -->
+      </section>
+      <!-- Services end -->
+
+      <!-- ======================================================================================================================= -->
+
+      <!-- Socials start -->
       <section id="ts-features" class="ts-features">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 class="section-title">Know us deeply</h2>
+              <h3 class="section-sub-title">About us</h3>
+            </div>
+            <!-- <div class="container row text-left">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eum minima ad hic. Eum totam labore repellat a natus, autem amet quod quaerat, magnam culpa debitis ut deleniti porro magni ipsum! Laboriosam, sit, quisquam et atque soluta nemo fugiat laborum sapiente facilis quia neque nostrum cumque alias quis quae porro aperiam? Repellendus quo ducimus cumque excepturi blanditiis quod cupiditate mollitia distinctio similique facilis commodi ratione porro, qui nisi neque? Beatae quas voluptatem neque eaque labore pariatur, possimus consequuntur quis ut optio dolorem atque dicta fugit amet mollitia obcaecati. Rem, voluptatibus tempora tenetur cumque eos pariatur esse sit laborum quas facere reiciendis quod deserunt repellat nobis a atque ipsam cum sunt nemo, laudantium amet corporis consectetur explicabo. Sapiente alias dicta, vel facilis vitae ipsam modi earum asperiores! Fuga molestias ad iusto laudantium ipsam. Odit assumenda laborum in tenetur sunt molestias natus itaque quia distinctio, incidunt at sequi voluptatem similique officiis aliquid nemo! Perspiciatis minima, dolores rem enim nobis doloribus totam ipsam. Possimus, reprehenderit est consectetur nobis temporibus quaerat suscipit in debitis sed eius quis accusamus similique eum cumque nisi, velit officiis aliquam quos quibusdam delectus corporis, dignissimos at voluptatem veniam! Nemo itaque quae corrupti consequatur expedita voluptates eos aspernatur possimus earum?</p>
+            </div> -->
+
+            <!-- YOUTUBE -->
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="into-sub-titl text-center">
+                Watch this video to know more about our work
+              </h3>
+              <div class="embed-responsive embed-responsive-1by1 mt-5">
+                <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/PO0dOjFEjoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <!-- <h2 class="into-title">About Us</h2> -->
+              <!-- <div class="container" style="background: url('./images/assets/Twitter-clouds.png'); background-position: 50%; height: 500px; width: 100%;"> -->
+              <!-- <img src="https://krispitech.com/wp-content/uploads/2021/05/twitter-logo.jpg" width="100%" height="stretch" alt="" srcset=""> -->
+            </div>
+            <!-- <div class="ts-intro">
+                <h2 class="into-title">About Us</h2>
+                <h3 class="into-sub-title">We deliver landmark projects</h3>
+                
+                <p>
+                  We are rethoric question ran over her cheek When she reached
+                  the first hills of the Italic Mountains, she had a last view
+                  back on the skyline of her hometown Bookmarksgrove, the
+                  headline of Alphabet Village and the subline of her own road,
+                  the Line Lane.
+                </p>
+              </div> -->
+            <!-- Intro box end -->
+
+            <!-- <div class="gap-20"></div> -->
+
+            <!-- <div class="row">
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">
+                        We've Repution for Excellence
+                      </h3>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-sliders-h"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">We Build Partnerships</h3>
+                    </div>
+                  </div>
+                 
+                </div>
+                
+              </div> -->
+            <!-- Content row 1 end -->
+
+            <!-- <div class="row"> 
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-thumbs-up"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Guided by Commitment</h3>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-users"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">A Team of Professionals</h3>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div> -->
+            <!-- Content row 1 end -->
+            <!-- </div> -->
+            <!-- Col end -->
+
+            <div class="col-lg-0 mt-4 mt-lg-0">
+              <!-- <h3 class="into-sub-title text-center">
+                Look Into Our Twitter Feed
+              </h3> -->
+              <div
+                class="container-fluid  border-2 border-dark rounded mt-5"
+              >
+              <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident architecto qui accusamus voluptas repellendus sapiente sed distinctio dolore repudiandae deleniti illum at nulla maiores, totam nemo vel laudantium beatae expedita quisquam suscipit dicta labore harum velit! Dignissimos quia aut delectus non alias, fugiat quam ea autem, sed praesentium saepe voluptas enim labore eveniet voluptatum neque, esse nam asperiores dolorum voluptatibus iusto commodi. Fugiat ut vitae recusandae veritatis, exercitationem quibusdam fuga error consequatur praesentium sequi modi ex dignissimos sint, expedita odit.</p> -->
+                <!-- <a
+                  class="twitter-timeline"
+                  data-width="800"
+                  data-height="500"
+                  data-dnt="true"
+                  data-theme="dark"
+                  href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw"
+                  >Tweets by TwitterDev</a
+                >
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></script> -->
+              </div>
+
+              <!-- <p>
+                Minim Austin 3 wolf moon scenester aesthetic, umami odio
+                pariatur bitters. Pop-up occaecat taxidermy street art, tattooed
+                beard literally.
+              </p> -->
+
+              <!-- <div class="accordion accordion-group" id="our-values-accordion">
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingOne">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Safety
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#our-values-accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidata
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Customer Service
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#our-values-accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidata
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingThree">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Integrity
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#our-values-accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidata
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!--/ Accordion end -->
+            </div>
+            <!-- Col end -->
+          </div>
+          <!-- Row end -->
+          
+          <div class="row mt-5 mt-lg-20 ">
+            
+            <div class="col-lg-6 our-values mt-4 mt-lg-0  d-flex flex-column justify-content-center align-items-center">
+              <h2 class="into-sub-titl text-center">
+                Our Fundamental Values
+              </h2>
+              <div
+                class=" border-2 border-dark rounded mt-0 mt-lg-0"
+              >
+              <!-- <h1>Our Fundamental Values</h1> -->
+              <ul>
+                <li>Proffessionalism in construction industry</li>
+                <li>Services standardization</li>
+                <li>Transparency</li>
+                <li>Honesty</li>
+                <li>Trustworthy</li>
+                <li>Integrity</li>
+                <li>Innovation</li>
+              </ul>
+              </div>
+              <!-- <h3 class="into-sub-title text-center">
+                Watch this video to know more about ur work
+              </h3>
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PO0dOjFEjoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div> -->
+              <!-- <h2 class="into-title">About Us</h2> -->
+              <!-- <div class="container" style="background: url('./images/assets/Twitter-clouds.png'); background-position: 50%; height: 500px; width: 100%;"> -->
+              <!-- <img src="https://krispitech.com/wp-content/uploads/2021/05/twitter-logo.jpg" width="100%" height="stretch" alt="" srcset=""> -->
+            </div>
+            <!-- <div class="ts-intro">
+                <h2 class="into-title">About Us</h2>
+                <h3 class="into-sub-title">We deliver landmark projects</h3>
+                
+                <p>
+                  We are rethoric question ran over her cheek When she reached
+                  the first hills of the Italic Mountains, she had a last view
+                  back on the skyline of her hometown Bookmarksgrove, the
+                  headline of Alphabet Village and the subline of her own road,
+                  the Line Lane.
+                </p>
+              </div> -->
+            <!-- Intro box end -->
+
+            <!-- <div class="gap-20"></div> -->
+
+            <!-- <div class="row">
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">
+                        We've Repution for Excellence
+                      </h3>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-sliders-h"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">We Build Partnerships</h3>
+                    </div>
+                  </div>
+                 
+                </div>
+                
+              </div> -->
+            <!-- Content row 1 end -->
+
+            <!-- <div class="row">
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-thumbs-up"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Guided by Commitment</h3>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+
+                <div class="col-md-6">
+                  <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-users"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">A Team of Professionals</h3>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div> -->
+            <!-- Content row 1 end -->
+            <!-- </div> -->
+            <!-- Col end -->
+
+            <div class="col-lg-6 mt-4 mt-lg-0 twitter-feed">
+              <h2 class="into-sub-titl text-center">
+                Look Into Our Twitter Feed
+              </h2>
+              <div
+                class="container-fluid  border-2 border-dark rounded mt-5"
+              >
+                <a
+                  class="twitter-timeline"
+                  data-width="800"
+                  data-height="610"
+                  data-dnt="true"
+                  data-theme="dark"
+                  href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw"
+                  >Tweets by TwitterDev</a
+                >
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></script>
+              </div>
+
+              <!-- <p>
+                Minim Austin 3 wolf moon scenester aesthetic, umami odio
+                pariatur bitters. Pop-up occaecat taxidermy street art, tattooed
+                beard literally.
+              </p> -->
+
+              <!-- <div class="accordion accordion-group" id="our-values-accordion">
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingOne">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Safety
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#our-values-accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidata
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Customer Service
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#our-values-accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidata
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingThree">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Integrity
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#our-values-accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidata
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!--/ Accordion end -->
+            </div>
+            <!-- Col end -->
+          </div>
+          <!-- Row end -->
+        </div>
+        <!-- Container end -->
+      </section>
+      <!-- Socials End -->
+
+      <!-- ====================================================================================================================== -->
+
+      <!-- NON - EDITED SERVICE SECTION -->
+      <!-- <section id="ts-features" class="ts-features">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
@@ -369,7 +1078,7 @@
                   the Line Lane.
                 </p>
               </div>
-              <!-- Intro box end -->
+         
 
               <div class="gap-20"></div>
 
@@ -385,9 +1094,9 @@
                       </h3>
                     </div>
                   </div>
-                  <!-- Service 1 end -->
+                 
                 </div>
-                <!-- col end -->
+                
 
                 <div class="col-md-6">
                   <div class="ts-service-box">
@@ -398,11 +1107,11 @@
                       <h3 class="service-box-title">We Build Partnerships</h3>
                     </div>
                   </div>
-                  <!-- Service 2 end -->
+                  
                 </div>
-                <!-- col end -->
+                
               </div>
-              <!-- Content row 1 end -->
+              
 
               <div class="row">
                 <div class="col-md-6">
@@ -414,9 +1123,9 @@
                       <h3 class="service-box-title">Guided by Commitment</h3>
                     </div>
                   </div>
-                  <!-- Service 1 end -->
+                  
                 </div>
-                <!-- col end -->
+                
 
                 <div class="col-md-6">
                   <div class="ts-service-box">
@@ -427,13 +1136,11 @@
                       <h3 class="service-box-title">A Team of Professionals</h3>
                     </div>
                   </div>
-                  <!-- Service 2 end -->
+                 
                 </div>
-                <!-- col end -->
               </div>
-              <!-- Content row 1 end -->
             </div>
-            <!-- Col end -->
+            
 
             <div class="col-lg-6 mt-4 mt-lg-0">
               <h3 class="into-sub-title">Our Values</h3>
@@ -530,17 +1237,21 @@
                   </div>
                 </div>
               </div>
-              <!--/ Accordion end -->
+              
             </div>
-            <!-- Col end -->
+            
           </div>
-          <!-- Row end -->
+         
         </div>
-        <!-- Container end -->
-      </section>
+        
+      </section> -->
       <!-- Feature are end -->
 
-      <section id="facts" class="facts-area dark-bg">
+      <!-- ============================================================================================================================= -->
+
+      <!-- NON-EDITED FACTS SECTION -->
+      <!-- Facts start -->
+      <!-- <section id="facts" class="facts-area dark-bg">
         <div class="container">
           <div class="facts-wrapper">
             <div class="row">
@@ -559,7 +1270,6 @@
                   <h3 class="ts-facts-title">Total Projects</h3>
                 </div>
               </div>
-              <!-- Col end -->
 
               <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
                 <div class="ts-facts-img">
@@ -576,7 +1286,6 @@
                   <h3 class="ts-facts-title">Staff Members</h3>
                 </div>
               </div>
-              <!-- Col end -->
 
               <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
                 <div class="ts-facts-img">
@@ -593,7 +1302,6 @@
                   <h3 class="ts-facts-title">Hours of Work</h3>
                 </div>
               </div>
-              <!-- Col end -->
 
               <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
                 <div class="ts-facts-img">
@@ -610,144 +1318,17 @@
                   <h3 class="ts-facts-title">Countries Experience</h3>
                 </div>
               </div>
-              <!-- Col end -->
             </div>
-            <!-- Facts end -->
           </div>
-          <!--/ Content row end -->
         </div>
-        <!--/ Container end -->
-      </section>
+      </section> -->
       <!-- Facts end -->
 
-      <section id="ts-service-area" class="ts-service-area pb-0">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-12">
-              <h2 class="section-title">We Are Specialists In</h2>
-              <h3 class="section-sub-title">What We Do</h3>
-            </div>
-          </div>
-          <!--/ Title row end -->
+      <!-- ============================================================================================================================= -->
 
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="ts-service-box d-flex">
-                <!-- <div class="ts-service-box-img">
-                <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
-              </div> -->
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title">
-                    <a href="#">Home Construction</a>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Integer adipiscing erat
-                  </p>
-                </div>
-              </div>
-              <!-- Service 1 end -->
 
-              <div class="ts-service-box d-flex">
-                <!-- <div class="ts-service-box-img">
-                <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
-              </div> -->
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title">
-                    <a href="#">Building Remodels</a>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Integer adipiscing erat
-                  </p>
-                </div>
-              </div>
-              <!-- Service 2 end -->
-
-              <div class="ts-service-box d-flex">
-                <!-- <div class="ts-service-box-img">
-                <img loading="lazy" src="images/icon-image/service-icon3.png"  alt="service-icon">
-              </div> -->
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title">
-                    <a href="#">Interior Design</a>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Integer adipiscing erat
-                  </p>
-                </div>
-              </div>
-              <!-- Service 3 end -->
-            </div>
-            <!-- Col end -->
-
-            <div class="col-lg-4 text-center">
-              <img
-                loading="lazy"
-                class="img-fluid"
-                src="./images/services/bluehouse111.png"
-                alt="service-avater-image"
-              />
-            </div>
-            <!-- Col end -->
-
-            <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
-              <div class="ts-service-box d-flex">
-                <!-- <div class="ts-service-box-img">
-                <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
-              </div> -->
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title">
-                    <a href="#">Exterior Design</a>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Integer adipiscing erat
-                  </p>
-                </div>
-              </div>
-              <!-- Service 4 end -->
-
-              <div class="ts-service-box d-flex">
-                <!-- <div class="ts-service-box-img">
-                <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
-              </div> -->
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Renovation</a></h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Integer adipiscing erat
-                  </p>
-                </div>
-              </div>
-              <!-- Service 5 end -->
-
-              <div class="ts-service-box d-flex">
-                <!-- <div class="ts-service-box-img">
-                <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon">
-              </div> -->
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title">
-                    <a href="#">Safety Management</a>
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit
-                    Integer adipiscing erat
-                  </p>
-                </div>
-              </div>
-              <!-- Service 6 end -->
-            </div>
-            <!-- Col end -->
-          </div>
-          <!-- Content row end -->
-        </div>
-        <!--/ Container end -->
-      </section>
-      <!-- Service end -->
-
-      <section id="project-area" class="project-area solid-bg">
+      <!-- Projects start -->
+      <!-- <section id="project-area" class="project-area solid-bg">
         <div class="container">
           <div class="row text-center">
             <div class="col-lg-12">
@@ -755,7 +1336,7 @@
               <h3 class="section-sub-title">Recent Projects</h3>
             </div>
           </div>
-          <!--/ Title row end -->
+          
 
           <div class="row justify-content-center">
             <div class="col-9">
@@ -800,17 +1381,17 @@
                     id="exteriordesign"
                     value="exteriordesign"
                   />Exterior Design
-                </label>
+                </label> -->
                 <!-- <label for="residential">
             <input type="radio" name="shuffle-filter" id="residential" value="residential">Residential
           </label>
           <label for="healthcare">
             <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare">Healthcare
           </label> -->
-              </div>
+              <!-- </div> -->
               <!-- project filter end -->
 
-              <div class="row shuffle-wrapper">
+              <!-- <div class="row shuffle-wrapper">
                 <div class="col-1 shuffle-sizer"></div>
 
                 <div
@@ -833,12 +1414,12 @@
                         <h3 class="project-item-title">
                           <a href="projects.html">Electricity</a>
                         </h3>
-                        <p class="project-cat">Electricity</p>
+                        <p class="project-cat">Electricity</p> -->
                         <!-- <p class="project-cat">Government</p> -->
-                      </div>
+                      <!-- </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- shuffle item 1 end -->
 
                 <!-- <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
@@ -859,7 +1440,7 @@
           </div> -->
                 <!-- shuffle item 2 end -->
 
-                <div
+                <!-- <div
                   class="col-lg-4 col-md-6 shuffle-item"
                   data-groups='["exteriordesign","plumbing"]'
                 >
@@ -879,15 +1460,15 @@
                         <h3 class="project-item-title">
                           <a href="projects.html">Plumbing </a>
                         </h3>
-                        <p class="project-cat">Plumbing</p>
+                        <p class="project-cat">Plumbing</p> -->
                         <!-- <p class="project-cat">Infrastructure</p> -->
-                      </div>
+                      <!-- </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- shuffle item 3 end -->
 
-                <div
+                <!-- <div
                   class="col-lg-4 col-md-6 shuffle-item"
                   data-groups='["interiordesign","electricity"]'
                 >
@@ -907,12 +1488,12 @@
                         <h3 class="project-item-title">
                           <a href="projects.html">Interior Design</a>
                         </h3>
-                        <p class="project-cat">Interior</p>
+                        <p class="project-cat">Interior</p> -->
                         <!-- <p class="project-cat">Infrastructure</p> -->
-                      </div>
+                      <!-- </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- shuffle item 4 end -->
 
                 <!-- <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
@@ -951,28 +1532,33 @@
             </div>
           </div> -->
                 <!-- shuffle item 6 end -->
-              </div>
+              <!-- </div> -->
               <!-- shuffle end -->
-            </div>
+            <!-- </div> -->
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <div class="general-btn text-center">
                 <a class="btn btn-primary" href="projects.html"
                   >View All Projects</a
                 >
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- Content row end -->
-        </div>
+        <!-- </div> -->
         <!--/ Container end -->
-      </section>
-      <!-- Project area end -->
+      <!-- </section> -->
+      <!-- Project end -->
 
-      <section class="content">
+      <!-- <section class="content">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
+          <div class="row d-flex justify-content-between"> -->
+            <!-- <div class="col-lg-6">
+              <div class="container">
+                <video src="./images/assets/video64.mp4" muted autoplay></video>
+              </div>
+            </div> -->
+            <!-- <div class="col-lg-12">
               <h3 class="column-title">Testimonials</h3>
 
               <div id="testimonial-slide" class="testimonial-slide">
@@ -997,12 +1583,12 @@
                         <span class="quote-subtext">Chairman, KCB</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- Quote item end -->
-                </div>
+                <!-- </div> -->
                 <!--/ Item 1 end -->
 
-                <div class="item">
+                <!-- <div class="item">
                   <div class="quote-item">
                     <span class="quote-text">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -1023,12 +1609,12 @@
                         <span class="quote-subtext">President of Rwanda</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- Quote item end -->
-                </div>
+                <!-- </div> -->
                 <!--/ Item 2 end -->
 
-                <div class="item">
+                <!-- <div class="item">
                   <div class="quote-item">
                     <span class="quote-text">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -1049,29 +1635,322 @@
                         <span class="quote-subtext">Wholesale Seller</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- Quote item end -->
-                </div>
+                <!-- </div> -->
                 <!--/ Item 3 end -->
-              </div>
+              <!-- </div> -->
               <!--/ Testimonial carousel end-->
-            </div>
+            <!-- </div> -->
             <!-- Col end -->
 
             <!-- ADD HAPPY CLIENT DIV HERE IF NEEDED -->
 
             <!-- Col end -->
-          </div>
+          <!-- </div> -->
           <!--/ Content row end -->
-        </div>
+        <!-- </div> -->
         <!--/ Container end -->
-      </section>
+      <!-- </section> -->
       <!-- Content end -->
 
       <!-- ADD SUBSCRIBE DIV HERE IF NEEDED -->
 
       <!-- ADD NEWS DIV HERE IF NEEDED -->
 
+
+      <!-- Portfolio starts -->
+      <section id="portfolio" class="main-container">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+              <h2 class="section-title">Take a look into what we do</h2>
+              <h3 class="section-sub-title">Portfolio</h3>
+            </div>
+      <div class="col-12">
+      <div class="row shuffle-wrapper">
+          <div class="col-1 shuffle-sizer"></div>
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;electricity&quot;,&quot;interiordesign&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/assets/76.JPG">
+                    <img class="img-fluid" src="images/assets/76.JPG" alt="project-image">
+                    <span class="gallery-icon"><i class="fa fa-plus"> </i>&nbsp; Expand</span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <!-- <h3 class="project-item-title">
+                        <a href="projects.html">Electricity</a>
+                      </h3> -->
+                      <p class="project-cat">Electricity</p>
+                      <!-- <p class="project-cat">Government</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 1 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;exteriordesign&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/assets/73.jpg">
+                <img class="img-fluid" src="images/assets/73.jpg" alt="project-image">
+                <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="projects.html">Exterior Design</a>
+                  </h3>
+                  <p class="project-cat">Exterior</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 2 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;residential&quot;,&quot;plumbing&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/assets/69.jpg">
+                    <img class="img-fluid" src="images/assets/69.jpg" alt="project-image">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="projects.html">Plumbing </a>
+                      </h3>
+                      <p class="project-cat">Plumbing</p>
+                      <!-- <p class="project-cat">Infrastructure</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 3 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;interiordesign&quot;,&quot;electricity&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/assets/72.jpg">
+                    <img class="img-fluid" src="images/assets/72.jpg" alt="project-image">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="projects.html">Interior Design</a>
+                      </h3>
+                      <p class="project-cat">Interior</p>
+                      <!-- <p class="project-cat">Infrastructure</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 4 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;offices&quot;,&quot;interiordesign&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/assets/75.JPG">
+                <img class="img-fluid" src="images/assets/75.JPG" alt="project-image">
+                <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="projects.html">Office designs</a>
+                  </h3>
+                  <p class="project-cat">Offices</p>
+                  <!-- <p class="project-cat">Infrastructure</p> -->
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 5 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;exteriordesign&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/assets/74.jpg">
+                <img class="img-fluid" src="images/assets/74.jpg" alt="project-image">
+                <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="projects.html">Residential Houses</a>
+                  </h3>
+                  <p class="project-cat">Residential</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 6 end -->
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;electricity&quot;,&quot;interiordesign&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/assets/76.JPG">
+                    <img class="img-fluid" src="images/assets/76.JPG" alt="project-image">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="projects.html">Electricity</a>
+                      </h3>
+                      <p class="project-cat">Electricity</p>
+                      <!-- <p class="project-cat">Government</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 1 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;exteriordesign&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/assets/73.jpg">
+                <img class="img-fluid" src="images/assets/73.jpg" alt="project-image">
+                <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="projects.html">Exterior Design</a>
+                  </h3>
+                  <p class="project-cat">Exterior</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 2 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;residential&quot;,&quot;plumbing&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/assets/69.jpg">
+                    <img class="img-fluid" src="images/assets/69.jpg" alt="project-image">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="projects.html">Plumbing </a>
+                      </h3>
+                      <p class="project-cat">Plumbing</p>
+                      <!-- <p class="project-cat">Infrastructure</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 3 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;interiordesign&quot;,&quot;electricity&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/assets/72.jpg">
+                    <img class="img-fluid" src="images/assets/72.jpg" alt="project-image">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="projects.html">Interior Design</a>
+                      </h3>
+                      <p class="project-cat">Interior</p>
+                      <!-- <p class="project-cat">Infrastructure</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 4 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;offices&quot;,&quot;interiordesign&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/assets/75.JPG">
+                <img class="img-fluid" src="images/assets/75.JPG" alt="project-image">
+                <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="projects.html">Office designs</a>
+                  </h3>
+                  <p class="project-cat">Offices</p>
+                  <!-- <p class="project-cat">Infrastructure</p> -->
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 5 end -->
+
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;exteriordesign&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/assets/74.jpg">
+                <img class="img-fluid" src="images/assets/74.jpg" alt="project-image">
+                <span class="gallery-icon"><i class="fa fa-plus"></i>&nbsp; Expand</span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="projects.html">Residential Houses</a>
+                  </h3>
+                  <p class="project-cat">Residential</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 6 end -->
+        </div><!-- shuffle end -->
+        </div>
+        </div>
+        </div>
+      </section>
+      <!-- portfoliio ends -->
+
+      <!-- Contact us start -->
+      <section class="container" id="contact-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 class="section-title">We love to hear from you</h2>
+              <h3 class="section-sub-title">contact to us</h3>
+            </div>
+          </div>
+          <div class="row">
+      <div class="col-md-12">
+        <!-- <h3 class="column-title">Talk to us</h3> -->
+        <!-- contact form works with formspree.io  -->
+        <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
+
+        <!-- <form id="contact-form" action="#" method="post" role="form"> -->
+        <form id="contact-form" role="form">
+          <div class="form-feedback-container text-center">
+            <p class="submit-feedback "></p>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Name</label>
+                <input class="form-control form-control-name" name="name" id="name" placeholder="Type your names here..." type="text" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Email</label>
+                <input class="form-control form-control-email" name="email" id="email" placeholder="Type your email here..." type="email"
+                  required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Subject</label>
+                <input class="form-control form-control-subject" name="subject" id="subject" placeholder="Type the subject here..." required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-control form-control-message" name="message" id="message" placeholder="Write your message here..." rows="10"
+              required></textarea>
+          </div>
+          <div class="text-right"><br>
+            <button id="sendBtn" class="btn btn-primary solid blank" type="submit">Send Message</button>
+          </div>
+          
+        </form>
+      </div>
+
+    </div><!-- Content row -->
+        </div>
+      </section>
+      <!-- Contact us end -->
+
+      <!-- footer start -->
       <footer id="footer" class="footer bg-overlay">
         <div class="footer-main">
           <div class="container">
@@ -1132,7 +2011,8 @@
                 <h3 class="widget-title">Services</h3>
                 <ul class="list-arrow">
                   <li><a href="">Interior Design</a></li>
-                  <li><a href="">Exterior Design</a></li><li>
+                  <li><a href="">Exterior Design</a></li>
+                  <li>
                     <a href="">Plumbing</a>
                   </li>
                   <li><a href="">Electricity</a></li>
@@ -1226,6 +2106,7 @@
 
       <!-- Template custom -->
       <script src="js/script.js"></script>
+      <script src="./js/handleForm.js"></script>
     </div>
     <!-- Body inner end -->
   </body>
