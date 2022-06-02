@@ -24,8 +24,14 @@ Description: Constra - Construction Html5 Template
 }
 
 body {
-  background: #fff;
   color: #555;
+}
+
+body .body-inner {
+  background-image: url(../images/assets/tubes1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body,
@@ -597,6 +603,7 @@ a[href^=tel] {
 #preloader {
   background: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed; 
@@ -604,10 +611,13 @@ a[href^=tel] {
   left: 0;
   right: 0;
   bottom: 0; 
-  z-index: 10;
+  z-index: 99999;
 }
 .preloader-h1 {
-  font-size: 3.5rem;
+  /* margin: 0;
+  padding: 0; */
+  line-height: 7px;
+  font-size: 1rem;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
@@ -1603,6 +1613,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Action style box */
 .call-to-action-box {
   margin-top: -50px;
+  margin-bottom: -65px;
+  z-index: 10;
 }
 
 .call-to-action-box .action-style-box {
@@ -1735,6 +1747,27 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   font-size: 20px;
 }
 
+
+
+/* TS-FEATURES
+================================================== */
+.ts-features-youtube {
+  background: #fff;
+  /* background-image: url(../images/assets/tubes1.jpeg); */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -50% 50%; */
+}
+
+.ts-features-twitter {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-section {
+  background: #fff;
+}
+
+
 /* Tab services */
 .featured-tab.tab-services .nav-tabs > li > a {
   font-size: 14px;
@@ -1775,6 +1808,13 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* Services
 ================================================== */
+
+.ts-service-area {
+  background-color: var(--mainBlue);
+}
+.ts-service-area .section-title, .ts-service-area .section-sub-title {
+  color: #fff;
+}
 /* Service box */
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
@@ -1809,16 +1849,20 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .service-box-title a {
-  color: var(--mainBlue);
+  color: #fff;
+}
+.ts-service-box-info p {
+  color: #000;
 }
 
 .service-box-title a:hover {
   color: #ffb600;
 }
+
 /* Service SVG */
 .service-svg {
   /* background-color: var(--mainBlue); */
-  color: var(--mainBlue);
+  color: #fff;
 }
 
 /* Service box bg */
@@ -1986,22 +2030,39 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* About us HOME PAGE */
 
+.twitter-row {
+  /* padding: 2rem 0; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* z-index: 10; */
+}
+
+.our-values {
+  text-align: center;
+}
+
 /* Our values */
 .our-values h2 {
-  color: var(--mainBlue);
+  padding-left: 2rem;
+  color: #fff;
+  text-decoration: underline;
 }
 .our-values ul li {
-  /* background: var(--mainBlue); */
-  /* color: var(--mainBlue); */
+  /* text-align: center; */
+  background: var(--mainOrange);
+  border-radius: 7px;
+  color: #000;
   margin: 1rem 0;
-  /* padding: 1rem 0; */
+  padding: 0.8rem 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   /* list-style-type: none; */
 }
 /* Twitter Feed */
+/* .twitter-feed .rounded{
+  background: rgba(0, 0, 0, 0.01);
+} */
 .twitter-feed h2 {
-  color: var(--mainBlue);
+  color: #fff;
 }
 
 /* Projects area
@@ -2052,6 +2113,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Project shuffle Item */
 .shuffle-item {
   padding: 0.5rem;
+  /* margin: 0.5rem; */
+  /* border: 1px solid ; */
 }
 
 .shuffle-item .project-img-container {
@@ -2144,7 +2207,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   display: inline-block;
   padding: 2px 8px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -3122,6 +3185,14 @@ img.testimonial-thumb {
 
 /* Contact Us
 ================================================== */
+.contact-section {
+  background: var(--mainBlue);
+}
+
+.contact-section h2, .contact-section h3 {
+  color: #fff;
+}
+
 .map {
   height: 450px;
   z-index: 1;
@@ -3152,16 +3223,18 @@ img.testimonial-thumb {
   margin-bottom: 0;
 }
 
-label {
+/* label {
   font-weight: 400;
-}
+} */
 .form-group label {
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--mainBlue);
+  color: #fff;
 }
 .form-control {
+  border: 1px solid transparent;
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
 }
 .form-control:focus {
   border: 1px solid var(--mainBlue);
