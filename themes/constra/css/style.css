@@ -2055,7 +2055,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   padding: 0.8rem 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  /* list-style-type: none; */
+  list-style-type: none;
 }
 /* Twitter Feed */
 /* .twitter-feed .rounded{
