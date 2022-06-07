@@ -151,7 +151,7 @@ jQuery(function ($) {
         slidesToScroll: 1,
         autoplay: true,
         dots: true,
-        speed: 600,
+        speed: 2000,
         arrows: true,
         prevArrow:
           '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
@@ -170,7 +170,7 @@ jQuery(function ($) {
         slidesToScroll: 1,
         autoplay: true,
         dots: false,
-        speed: 2000,
+        speed: 600,
         arrows: true,
         prevArrow:
           '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
