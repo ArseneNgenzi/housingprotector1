@@ -4,11 +4,11 @@ const sendMail = (e) => {
   e.preventDefault()
   const names = document.getElementById('name').value,
     email = document.getElementById('email').value,
-    subject = document.getElementById('subject').value,
+    // subject = document.getElementById('subject').value,
     message = document.getElementById('message').value,
     reply_to = document.getElementById('email').value
 
-  if (names && email && subject && message) {
+  if (names && email && message) {
     let templateParams = {
       from_name: names,
       from_email: email,
@@ -28,7 +28,7 @@ const sendMail = (e) => {
         // console.log('sending succeeded', res.status)
         document.getElementById('name').value = ''
         document.getElementById('email').value = ''
-        document.getElementById('subject').value = ''
+        // document.getElementById('subject').value = ''
         document.getElementById('message').value = ''
         if (res.status == 200) {
           document.querySelector('.submit-feedback').innerHTML =
@@ -41,7 +41,9 @@ const sendMail = (e) => {
         }
       })
   } else {
-    return false
+    document.querySelector('.submit-feedback').innerHTML = "Please fill all fields!"
+    document.querySelector('.submit-feedback').classList.add('error')
+    // return false
   }
 }
 

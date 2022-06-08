@@ -2037,25 +2037,32 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .our-values {
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Our values */
 .our-values h2 {
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   color: #fff;
   text-decoration: underline;
 }
 .our-values ul li {
-  /* text-align: center; */
+  /* width: 100%; */
+  text-align: center;
   background: var(--mainOrange);
   border-radius: 7px;
   color: #000;
-  margin: 1rem 0;
+  margin: 1rem auto;
   padding: 0.8rem 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   list-style-type: none;
+}
+
+.our-values ul {
+  /* text-align: center; */
+  list-style-type: none;
+  padding-inline-start: 0px;
 }
 /* Twitter Feed */
 /* .twitter-feed .rounded{
