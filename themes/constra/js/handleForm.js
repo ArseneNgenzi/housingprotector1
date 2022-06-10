@@ -12,7 +12,7 @@ const sendMail = (e) => {
     let templateParams = {
       from_name: names,
       from_email: email,
-      from_subject: subject,
+      // from_subject: subject,
       message: message,
       reply_to: reply_to,
     }
@@ -20,7 +20,8 @@ const sendMail = (e) => {
     emailjs
       .send(
         'service_dqk2hd9',
-        'template_nakp135',
+        // 'template_nakp135',
+        'template_h8zl0pr',
         templateParams,
         'hPWnzAmKyuf0rpatB'
       )
