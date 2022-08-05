@@ -33,15 +33,19 @@ $ npm run dev
 ```
 ## This project has a Admin Dashboard built with React.js and MySQL database... To access it; run:
 
+```
 $ cd adminDashboard/frontend
+
 ```
 
-7. Install dependencies:
+7. Install dependencies
 
+```
 $ npm install
 ```
 
 8. Display the project: 
 
+```
 $ npm start
 ```
