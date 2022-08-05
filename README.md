@@ -31,3 +31,16 @@ $ node app
 ```
 $ npm run dev
 ```
+7. project has a Admin Dashboard built with react.js... To access it; run:
+
+$ cd adminDashboard/frontend
+```
+7.1 Install dependencies:
+
+$ npm install
+```
+
+7.2 Display the project: 
+
+$ npm start
+```
