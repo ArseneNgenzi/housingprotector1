@@ -31,9 +31,11 @@ $ node app
 ```
 $ npm run dev
 ```
-## This project has a Admin Dashboard built with React.js and MySQL database... To access it; run:
+## This project has a Admin Dashboard built with React.js and MySQL database and Node.js... To access it; run:
 
 ```
+# Download Admin Dashboard from here: https://github.com/ArseneNgenzi/housingprotector
+
 $ cd adminDashboard/frontend
 
 ```
